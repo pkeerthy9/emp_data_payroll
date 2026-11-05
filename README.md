@@ -206,9 +206,9 @@ Open the local frontend address displayed by Vite in your browser.
 
 ## 👩‍💻 Developer
 
-**Keerthana**
+**Keerthy**
 
-GitHub: [keerthana07-kizz](https://github.com/keerthana07-kizz)
+GitHub: [pkeerthy9](https://github.com/pkeerthy9)
 
 ## 📌 Project Information
 
