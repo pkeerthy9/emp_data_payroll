@@ -1,0 +1,224 @@
+
+.generate-payroll-page {
+  width: 100%;
+  padding: 30px;
+  color: #35483b;
+  font-family: 'Inter', sans-serif;
+}
+
+.generate-payroll-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.generate-payroll-eyebrow {
+  color: #a87985;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.generate-payroll-heading h1 {
+  margin: 8px 0;
+  color: #35483b;
+  font-size: 29px;
+  font-weight: 750;
+}
+
+.generate-payroll-heading p,
+.generate-payroll-section-title p {
+  margin: 0;
+  color: #89958a;
+  font-size: 12px;
+}
+
+.generate-payroll-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  color: #66816b;
+  background: #eaf0e7;
+}
+
+.generate-payroll-section {
+  margin-bottom: 20px;
+  padding: 25px;
+  border: 1px solid #e9ede5;
+  border-radius: 17px;
+  background: #fffefa;
+}
+
+.generate-payroll-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 23px;
+  color: #718a75;
+}
+
+.generate-payroll-section-title h2,
+.generated-payroll-result h2 {
+  margin: 0 0 5px;
+  color: #435748;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.generate-payroll-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #68776b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.generate-payroll-field input,
+.generate-payroll-field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 13px;
+  border: 1px solid #e5eae2;
+  border-radius: 9px;
+  outline: none;
+  background: #fbfcf8;
+  color: #35483b;
+  font-family: inherit;
+  font-size: 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.generate-payroll-field input:focus,
+.generate-payroll-field select:focus {
+  border-color: #91a993;
+  box-shadow: 0 0 0 3px rgba(145, 169, 147, 0.13);
+}
+
+.generate-payroll-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.generate-payroll-submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.generate-payroll-submit button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 45px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 10px;
+  background: #6f8973;
+  color: white;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.generate-payroll-submit button:hover {
+  background: #58735d;
+  transform: translateY(-1px);
+}
+
+.generate-payroll-submit button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.generate-payroll-message {
+  margin-bottom: 18px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.generate-payroll-message.success {
+  background: #eaf3e9;
+  color: #587760;
+}
+
+.generate-payroll-message.error {
+  background: #fff0ef;
+  color: #b64c4c;
+}
+
+.generated-payroll-result {
+  margin-top: 25px;
+  padding: 25px;
+  border: 1px solid #e7ebe3;
+  border-radius: 17px;
+  background: #f4f6ef;
+}
+
+.generated-payroll-result h2 {
+  margin-bottom: 20px;
+}
+
+.generated-payroll-result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.generated-payroll-result-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.generated-payroll-result-grid span {
+  color: #879286;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.generated-payroll-result-grid strong {
+  color: #465e4b;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.generated-payroll-result-grid .generated-net-salary strong {
+  color: #b27684;
+}
+
+.generated-payroll-result > p {
+  margin: 20px 0 0;
+  color: #68776b;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .generate-payroll-page {
+    padding: 18px;
+  }
+
+  .generate-payroll-grid,
+  .generated-payroll-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .generate-payroll-section,
+  .generated-payroll-result {
+    padding: 19px;
+  }
+
+  .generate-payroll-heading h1 {
+    font-size: 24px;
+  }
+}

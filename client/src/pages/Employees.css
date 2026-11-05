@@ -1,0 +1,500 @@
+/* ===== EMPLOYEE MANAGEMENT PAGE ===== */
+
+.employees-page {
+  min-height: 100vh;
+  padding: 34px;
+  background: #f5f7f2;
+  color: #303d35;
+  font-family: 'Inter', sans-serif;
+}
+
+.employees-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.employees-eyebrow {
+  color: #8a9d89;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.employees-header h1 {
+  margin: 9px 0;
+  font-size: 29px;
+  font-weight: 750;
+  letter-spacing: -1px;
+}
+
+.employees-header p,
+.employee-list-heading p {
+  color: #89948a;
+  font-size: 12px;
+}
+
+.employee-add-button,
+.employee-save-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #627d68;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.employee-add-button:hover,
+.employee-save-button:hover {
+  background: #4d6954;
+  transform: translateY(-1px);
+}
+
+.employee-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  width: 230px;
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid #e9ede5;
+  border-radius: 15px;
+  background: #fffefa;
+  box-shadow: 0 5px 18px rgba(48, 61, 53, 0.035);
+}
+
+.employee-stat-icon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  place-items: center;
+  border-radius: 12px;
+  background: #eaf1e8;
+  color: #627d68;
+}
+
+.employee-stat-card span {
+  color: #89948a;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.employee-stat-card h2 {
+  margin-top: 4px;
+  font-size: 25px;
+}
+
+.employee-list-card {
+  padding: 25px;
+  border: 1px solid #e9ede5;
+  border-radius: 16px;
+  background: #fffefa;
+  box-shadow: 0 5px 20px rgba(48, 61, 53, 0.035);
+}
+
+.employee-list-heading,
+.employee-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.employee-list-heading h2 {
+  margin-bottom: 6px;
+  font-size: 17px;
+}
+
+.employee-refresh-button,
+.employee-actions button,
+.employee-close-button {
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 9px;
+  background: #f0f4ed;
+  color: #627d68;
+  cursor: pointer;
+}
+
+.employee-refresh-button {
+  width: 36px;
+  height: 36px;
+}
+
+.employee-refresh-button:hover,
+.employee-actions button:hover {
+  background: #e4ede2;
+}
+
+.employee-toolbar {
+  margin: 24px 0 18px;
+}
+
+.employee-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(350px, 100%);
+  padding: 11px 13px;
+  border: 1px solid #e7ebe4;
+  border-radius: 10px;
+  background: #fafbf8;
+  color: #91a092;
+}
+
+.employee-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #303d35;
+  font: inherit;
+  font-size: 12px;
+}
+
+.employee-search input::placeholder {
+  color: #a2aca2;
+}
+
+.employee-filter-button {
+  padding: 10px 14px;
+  border: 1px solid #e6ebe3;
+  border-radius: 9px;
+  background: white;
+  color: #647568;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.employee-filter-button.selected {
+  border-color: #d8a0a9;
+  background: #fbf0f1;
+  color: #ad6976;
+}
+
+.employee-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.employee-table th {
+  padding: 14px 12px;
+  border-bottom: 1px solid #edf0e9;
+  color: #9aa59a;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.employee-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #f0f2ed;
+  color: #647268;
+  font-size: 11px;
+}
+
+.employee-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.employee-table tbody tr:hover {
+  background: #fafbf8;
+}
+
+.employee-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.employee-avatar {
+  display: grid;
+  flex-shrink: 0;
+  width: 37px;
+  height: 37px;
+  place-items: center;
+  border-radius: 11px;
+  background: #f4e9eb;
+  color: #a66d79;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.employee-name-cell strong,
+.employee-name-cell span {
+  display: block;
+}
+
+.employee-name-cell strong {
+  margin-bottom: 4px;
+  color: #38483d;
+  font-size: 11px;
+}
+
+.employee-name-cell span {
+  color: #9ba59b;
+  font-size: 10px;
+}
+
+.employee-status {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.employee-status.active {
+  background: #eaf3e9;
+  color: #628269;
+}
+
+.employee-status.inactive {
+  background: #faecee;
+  color: #b87984;
+}
+
+.employee-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.employee-actions button {
+  width: 32px;
+  height: 32px;
+}
+
+.employee-empty {
+  padding: 45px 15px;
+  color: #98a398;
+  font-size: 12px;
+  text-align: center;
+}
+
+.employee-message {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.employee-message.success {
+  background: #eaf3e9;
+  color: #587760;
+}
+
+.employee-message.error {
+  background: #fff0ef;
+  color: #b64c4c;
+}
+
+/* ===== EMPLOYEE FORM MODAL ===== */
+
+.employee-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(35, 48, 39, 0.42);
+  backdrop-filter: blur(5px);
+}
+
+.employee-modal {
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 28px;
+  border: 1px solid #e9ede5;
+  border-radius: 19px;
+  background: #fffefa;
+  box-shadow: 0 20px 65px rgba(35, 48, 39, 0.2);
+}
+
+.employee-modal-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.employee-modal-heading span {
+  color: #a0a99f;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.employee-modal-heading h2 {
+  margin-top: 7px;
+  color: #35463a;
+  font-size: 21px;
+}
+
+.employee-close-button {
+  width: 35px;
+  height: 35px;
+}
+
+.employee-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.employee-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #66766a;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.employee-form-grid input,
+.employee-form-grid select,
+.employee-form-grid textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #e5eae2;
+  border-radius: 9px;
+  outline: none;
+  background: #fafbf8;
+  color: #35463a;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  transition: 0.2s ease;
+}
+
+.employee-form-grid input:focus,
+.employee-form-grid select:focus,
+.employee-form-grid textarea:focus {
+  border-color: #91aa92;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(98, 125, 104, 0.09);
+}
+
+.employee-full-width {
+  grid-column: 1 / -1;
+}
+
+.employee-form-grid textarea {
+  resize: vertical;
+}
+
+.employee-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.employee-cancel-button {
+  padding: 11px 17px;
+  border: 1px solid #e7ebe4;
+  border-radius: 9px;
+  background: white;
+  color: #748176;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.employee-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 700px) {
+  .employees-page {
+    padding: 20px 15px;
+  }
+
+  .employees-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .employees-header h1 {
+    font-size: 24px;
+  }
+
+  .employee-stat-card {
+    width: 100%;
+  }
+
+  .employee-list-card {
+    padding: 16px;
+  }
+
+  .employee-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-full-width {
+    grid-column: auto;
+  }
+
+  .employee-modal {
+    padding: 20px;
+  }
+
+  .employee-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .employee-search {
+    width: 100%;
+  }
+
+  .employee-filter-button {
+    align-self: flex-start;
+  }
+}
+/* Employee statistics layout */
+.employee-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.employee-stats-grid .employee-stat-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .employee-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
